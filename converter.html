@@ -1,0 +1,88 @@
+<html>
+<head>
+    
+    <title>Temperature Convertor</title>
+    <script>
+        function  fun1()
+        {
+            var x=document.getElementById("id1").value;
+            var a=document.getElementById("id4").value;
+            var z=document.getElementById("id3").value;
+            if(z=="Celsius")
+                {
+                    if(a=="Celsius")
+                        {
+                            document.getElementById("id2").value=x;
+                        }
+                    else{
+                     var y=((9/5)*x)+32;
+                    document.getElementById("id2").value=y;
+                    }
+                }
+            else if(z="Farhenheit")
+                {
+                    if(a=="Farhenheit")
+                        {
+                            document.getElementById("id2").value=x;                            
+                        }
+                    else{
+                    var y=(x-32)*(5/9);
+                    document.getElementById("id2").value=y;
+                    }
+                    
+                }
+            
+        }
+        
+            
+    </script>
+</head>
+<body style="background-image: url(xyz.jpg)">
+    
+    
+    <center>
+        <br>
+        
+    <form style="border: 2px solid black;background-color: #f5fec0; margin-bottom: 200px;margin-top: 50px;margin-left: 300px;margin-right: 300px ; font-size: 25px ">
+    <h1 style="Font-size:35px"><u>TEMPERATURE CONVERTOR</u></h1>
+        <br>
+        <br>
+    <label><b>Convert From : </b></label>
+    <select id="id3">
+    <option>Select</option>    
+    <option >Celsius</option>   
+    <option >Farhenheit</option>    
+        
+    </select>
+    <br>
+    <br>
+    <input id="id1" type="text" size="25" style="font-size:18px " >
+    <br>
+    <br>
+    <label><b>Convert To : </b></label>
+    <select id="id4">
+    <option>Select</option>    
+    <option>Celsius</option>   
+    <option>Farhenheit</option>    
+        
+    </select>
+    
+    
+    <br>
+    <br>
+    <input id="id2" type="text" size="25" style="font-size:18px "  >
+    <br>
+    <br>
+    <input type="button" onclick="fun1()" value="Convert" style="background-color: coral; font-size: 30px; border-radius: 5px;">
+        
+    
+        <input type="reset" style="background-color: coral; font-size: 30px;border-radius: 5px"; >
+           
+    <br>
+    <br>
+    <br>
+    <br>
+    </form>
+    </center>
+</body>
+</html>
